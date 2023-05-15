@@ -1,6 +1,6 @@
 {
   "name": "pcer",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Automatically add certificates locally in your machine",
   "main": "src/index.js",
   "type": "module",
@@ -14,6 +14,11 @@
     "cli",
     "npmtool"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeterHdd/pcer.git"
+  },
+  "homepage": "https://github.com/PeterHdd/pcer#readme",
   "author": "Peter Haddad",
   "license": "MIT",
   "dependencies": {
