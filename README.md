@@ -87,3 +87,11 @@ pcer add C:/Users/p.haddad/Downloads/github.crt -l git
 
 Certificate added successfully
 ```
+
+## Support!
+
+Support the repository by joining the [stargazers](https://github.com/PeterHdd/pcer/stargazers) for this repo ⭐
+
+## License
+
+Licensed under the [MIT License](https://github.com/PeterHdd/pcer/blob/main/LICENSE).
