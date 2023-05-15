@@ -1,6 +1,6 @@
 {
   "name": "pcer",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Automatically add certificates locally in your machine",
   "main": "src/index.js",
   "type": "module",

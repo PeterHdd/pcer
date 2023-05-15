@@ -3,7 +3,7 @@ import figlet from "figlet";
 import chalk from "chalk";
 import { add } from "./add.js";
 import { alias, list, remove } from "./alias.js";
-
+import { utils } from "./util/util.js";
 
 const program = new Command();
 
@@ -15,12 +15,12 @@ export default (inputarg) => {
 function init() {
     if (process.argv.length < 3 || process.argv[2] == "--help") {
         console.log(chalk.yellow(figlet.textSync('PCER', { horizontalLayout: 'full' })));
-
     }
+
     program
         .name(`${chalk.blueBright("pcer")}`)
         .usage(`${chalk.blueBright("<command> [<args>] [--help]")}`)
-        .version('0.5.0', '-v, --version', 'output the current version');
+        .version(`${utils.version}`, '-v, --version', 'output the current version');
 
     //add
     program.command("add <cert>")

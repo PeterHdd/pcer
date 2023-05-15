@@ -1,12 +1,10 @@
 import chalk from "chalk";
 import Configstore from 'configstore';
-import { readFileSync } from "fs";
 import inquirer from 'inquirer';
+import { utils } from "./util/util.js";
 
 
-
-const packageJson = JSON.parse(readFileSync('./package.json', 'utf8'));
-export const config = new Configstore(packageJson.name);
+export const config = new Configstore(utils.name);
 
 
 export const alias = (name, location) => {
@@ -44,8 +42,8 @@ function setAlias(name, location) {
 
 
 export const list = () => {
-    if (config.all == null) {
-        console.log(`${chalk.green("List is Empty")}`)
+    if (Object.keys(config.all).length === 0) {
+        console.log(`${chalk.redBright("List is Empty")}`)
     }
     for (const [key, value] of Object.entries(config.all)) {
         console.log(`${key} ----> ${chalk.green(value)}`);
