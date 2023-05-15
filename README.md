@@ -5,7 +5,7 @@
 <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/PeterHdd/pcer">
  </p>
  <br>
-<p align="center">A CLI to make it easier to certificates locally</p>
+<p align="center">A CLI to make it easier to add certificates locally</p>
 <br>
 
 ![image](https://github.com/PeterHdd/pcer/assets/29070108/3f127245-94f2-4e6d-b596-9e80d25f833a)
