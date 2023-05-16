@@ -58,7 +58,7 @@ export const get = (url, options) => {
         var name = `# ${url}\n`
         var prefix = '-----BEGIN CERTIFICATE-----\n';
         var postfix = '-----END CERTIFICATE-----';
-        var pemText = `${name} ${prefix} ${res.socket.getPeerCertificate().raw.toString('base64').match(/.{0,64}/g).join('\n')} ${postfix}`;
+        var pemText = `${name}${prefix}${res.socket.getPeerCertificate().raw.toString('base64').match(/.{0,64}/g).join('\n')}${postfix}`;
         writeToFile(location, pemText);
 
     }).on('error', (e) => {
