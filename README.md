@@ -89,7 +89,7 @@ pcer add C:/Users/p.haddad/Downloads/github.crt -l git
 Certificate added successfully
 ```
 
-## Update
+## Version Update❗
 
 ### Fetch
 
