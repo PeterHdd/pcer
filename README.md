@@ -102,6 +102,10 @@ Certificate added successfully
 ```
 
 The `pcer fetch` command takes the `<url>` as an argument without the `www` or the `https` and then, the location flag `-l` explained previously and an alias or the full path to where you want to save it.
+
+Example:
+
+![image](https://github.com/PeterHdd/pcer/assets/29070108/760b0f97-dd8e-40b9-9a22-372a350a212d)
  
 ## Support!
 
