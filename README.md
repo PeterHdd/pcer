@@ -18,6 +18,8 @@ The goal of this CLI is to make it easier to add certificates locally to your ma
 
 If you are using a security software that acts as a proxy then you won't be able to execute `git clone` until you add the certificate of `gitlab.com` or `github.com` locally in your machine, and the certificates gets updated more than once so, this operation has to be done frequently. It basically solves this issue [Unable to get local issuer certificate](https://stackoverflow.com/questions/36494336/npm-install-error-unable-to-get-local-issuer-certificate).
 
+Requires Node version: **15.3.0**
+
 
 ## Commands
 
@@ -93,7 +95,7 @@ Certificate added successfully
 
 ### Fetch
 
-> The following command works, as of version pcer@0.6.5. You can now easily fetch any certificate of type CRT and add it locally through only one command:
+> The following command works, as of version pcer@0.6.7. You can now easily fetch any certificate of type CRT and add it locally through only one command:
 
 ```
 pcer fetch github.com -l git
