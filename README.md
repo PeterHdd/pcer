@@ -6,6 +6,7 @@
  </p>
  <br>
 <p align="center">A CLI to make it easier to add certificates locally</p>
+<p align="center"> Easily Fetch any Certificate and add it locally using one command </p>
 <br>
 
 ![image](https://github.com/PeterHdd/pcer/assets/29070108/3f127245-94f2-4e6d-b596-9e80d25f833a)
@@ -88,6 +89,20 @@ pcer add C:/Users/p.haddad/Downloads/github.crt -l git
 Certificate added successfully
 ```
 
+## Update
+
+### Fetch
+
+> The following command works, as of version pcer@0.6.5. You can now easily fetch any certificate of type CRT and add it locally through only one command:
+
+```
+pcer fetch github.com -l git
+
+Certificate added successfully
+```
+
+The `pcer fetch` command takes the `<url>` as an argument without the `www` or the `https` and then, the location flag `-l` explained previously and an alias or the full path to where you want to save it.
+ 
 ## Support!
 
 Support the repository by joining the [stargazers](https://github.com/PeterHdd/pcer/stargazers) for this repo ⭐

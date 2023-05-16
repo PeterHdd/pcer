@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import figlet from "figlet";
 import chalk from "chalk";
-import { add } from "./add.js";
+import { add, get } from "./add.js";
 import { alias, list, remove } from "./alias.js";
 import { utils } from "./util/util.js";
 
@@ -41,8 +41,14 @@ function init() {
 
     //remove
     program.command("remove <alias>")
-        .description('alias to be rmeoved')
+        .description('alias to be removed')
         .action(remove);
+
+    //fetch
+    program.command("fetch <url>")
+        .description('fetch a SSL certificate, url should be of format, ex: example.com')
+        .requiredOption('-l, --location <location>', 'certificate to save')
+        .action(get);
 
     program.parse(process.argv);
 
