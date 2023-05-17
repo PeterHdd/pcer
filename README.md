@@ -20,6 +20,12 @@ If you are using a security software that acts as a proxy then you won't be able
 
 Requires Node version: **15.3.0**
 
+## Installation
+
+```
+npm install -g pcer
+```
+
 
 ## Commands
 
@@ -46,7 +52,8 @@ Commands:
   add [options] <cert>     Add a certificate into the specified location
   alias <name> <location>  Add a alias to the specified location
   list                     list all alias
-  remove <alias>           alias to be rmeoved
+  remove <alias>           alias to be removed
+  fetch [options] <url>    fetch a SSL certificate, url should be of format, ex: example.com
   help [command]           display help for command
 ```
 
