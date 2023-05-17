@@ -1,6 +1,6 @@
 {
   "name": "pcer",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Automatically fetch, add certificates, create and view aliases locally in your machine",
   "main": "src/index.js",
   "type": "module",
