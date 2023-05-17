@@ -3,7 +3,7 @@ import { readFile, writeFile } from 'node:fs';
 import path from "node:path";
 import chalk from "chalk";
 import { config } from "./alias.js";
-import https from "node:https"
+import https from "node:https";
 
 
 
@@ -60,9 +60,8 @@ export const get = (url, options) => {
         var postfix = '-----END CERTIFICATE-----';
         var pemText = `${name}${prefix}${res.socket.getPeerCertificate().raw.toString('base64').match(/.{0,64}/g).join('\n')}${postfix}`;
         writeToFile(location, pemText);
-
     }).on('error', (e) => {
-        console.error(e);
+        program.error(chalk.redBright(`Unable to fetch certificate`));
     });
     req.end();
 }

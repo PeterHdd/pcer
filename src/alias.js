@@ -2,8 +2,12 @@ import chalk from "chalk";
 import Configstore from 'configstore';
 import inquirer from 'inquirer';
 import { utils } from "./util/util.js";
+import { table } from "table";
+import { Command } from "commander";
 
 
+
+const program = new Command();
 export const config = new Configstore(utils.name);
 
 
@@ -14,7 +18,7 @@ export const alias = (name, location) => {
                 {
                     name: "confirm",
                     type: "confirm",
-                    message: "Alias already exists, are you sure you want to create an alias with this name?"
+                    message: "Alias already exists, are you sure you want to overwrite an alias with this name?"
                 }
             ])
             .then((answers) => {
@@ -42,15 +46,30 @@ function setAlias(name, location) {
 
 
 export const list = () => {
-    if (Object.keys(config.all).length === 0) {
-        console.log(`${chalk.redBright("List is Empty")}`)
+    let data = [];
+    if (!config.size) {
+        program.error(`${chalk.redBright("List is Empty")}`)
     }
-    for (const [key, value] of Object.entries(config.all)) {
-        console.log(`${key} ----> ${chalk.green(value)}`);
+    for (const [key, value] of Object.entries(config.all).sort()) {
+        data.push([key, chalk.greenBright(value)]);
     }
+    console.log(table(data));
 }
 
-export const remove = (alias) => {
-    config.delete(alias);
-    console.log(chalk.green("Successfully deleted alias"));
+export const remove = (alias, option) => {
+    if (alias && option.all) {
+        program.error(chalk.redBright("Invalid command, use 'pcer remove --all' or 'pcer remove <alias>'"));
+    }
+    if (alias) {
+        if (config.has(alias)) {
+            config.delete(alias);
+            console.log(chalk.green("Successfully deleted alias"));
+        } else {
+            console.log(chalk.redBright("Alias doesn't exist"));
+        }
+    }
+    else {
+        config.clear();
+        console.log(chalk.green("Successfully deleted all aliases"));
+    }
 }

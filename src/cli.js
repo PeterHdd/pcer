@@ -40,8 +40,10 @@ function init() {
         .action(list);
 
     //remove
-    program.command("remove <alias>")
+    program.command("remove")
+        .argument('[alias]')
         .description('alias to be removed')
+        .option('-a,--all', 'removes all alias')
         .action(remove);
 
     //fetch

@@ -1,7 +1,7 @@
 {
   "name": "pcer",
-  "version": "0.6.8",
-  "description": "Automatically fetch and add certificates locally in your machine",
+  "version": "0.7.0",
+  "description": "Automatically fetch, add certificates, create and view aliases locally in your machine",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "cli",
-    "npmtool"
+    "npmtool",
+    "util"
   ],
   "repository": {
     "type": "git",
@@ -31,6 +32,6 @@
     "https": "^1.0.0",
     "inquirer": "^9.2.3",
     "path": "^0.12.7",
-    "semver": "^7.5.1"
+    "table": "^6.8.1"
   }
 }
