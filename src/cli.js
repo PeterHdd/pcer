@@ -36,7 +36,7 @@ function init() {
 
     //list
     program.command("list")
-        .description('list all alias')
+        .description('list all aliases')
         .action(list);
 
     //remove
@@ -48,7 +48,7 @@ function init() {
 
     //fetch
     program.command("fetch <url>")
-        .description('fetch a SSL certificate, url should be of format, ex: example.com')
+        .description('fetch an SSL certificate, url should be of format, ex: example.com')
         .requiredOption('-l, --location <location>', 'certificate to save')
         .action(get);
 
