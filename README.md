@@ -3,11 +3,16 @@
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/PeterHdd/pcer">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/PeterHdd/pcer">
 <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/PeterHdd/pcer">
+ <img alt="npm" src="https://img.shields.io/npm/dw/pcer">
  </p>
  <br>
 <p align="center">A CLI tool to make it easier to add certificates locally</p>
 <p align="center">Easily fetch any certificate, create, view and remove aliases and add the certificate locally using one command</p>
 <br>
+
+<p align="center">
+ <a href="https://nodei.co/npm/pcer/"><img src="https://nodei.co/npm/pcer.png?compact=true"></a>
+</p>
 
 ![pcer --help](https://github.com/PeterHdd/pcer/assets/29070108/a7a5d7ea-245d-4fe0-8fdd-7fd3499e2b19)
 
